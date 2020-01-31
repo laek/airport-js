@@ -3,7 +3,10 @@
 class Airport {
 
   constructor() {
-    this.landed_planes = [];
+    this.landedPlanes = [];
   };
-  land() {};
+
+  land(plane) {
+    this.landedPlanes.push(plane);
+  };
 };
