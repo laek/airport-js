@@ -4,6 +4,7 @@ class Plane {
 
   constructor() {
     this._location;
+    this.id = new Id();
   };
 
   land(airport) {
@@ -15,4 +16,6 @@ class Plane {
     airport.planeDepart(this);
     this._location = "departed";
   };
+
+
 };

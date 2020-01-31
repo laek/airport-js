@@ -4,6 +4,7 @@ describe('Plane', function() {
 
   var plane;
   var airport;
+  var plane2;
 
   beforeEach(function() {
     plane = new Plane();
@@ -23,7 +24,7 @@ describe('Plane', function() {
   });
 
   it('knows its own ID', function() {
-    expect(plane.ID()).toBe(true);
+    expect(plane.id()).toBe(true);
   });
 
   it('planes have unique IDs', function () {
