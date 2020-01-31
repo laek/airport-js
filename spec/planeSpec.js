@@ -22,4 +22,12 @@ describe('Plane', function() {
     expect(airport.planes()).not.toContain(plane);
   });
 
+  it('knows its own ID', function() {
+    expect(plane.ID()).toBe(true);
+  });
+
+  it('planes have unique IDs', function () {
+    plane2 = new Plane();
+    expect(plane).not.toEqual(plane2);
+  });
 });

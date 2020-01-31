@@ -29,4 +29,17 @@ describe('Feature Test:', function(){
     expect(airport.planes().length).toEqual(2);
     expect(airport.planes()).toContain(plane2);
   });
+
+  it('airports can identify which plane it receives', function() {
+    plane2 = new Plane();
+    airport.receivePlane(plane);
+    airport.receivePlane(plane2);
+    airport.planeDepart(plane);
+    expect(airport.planes()).not.toContain(plane);
+  });
+
+  it('planes have unique IDs', function () {
+    plane2 = new Plane();
+    expect(plane).not.toEqual(plane2);
+  });
 });

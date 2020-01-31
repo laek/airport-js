@@ -31,4 +31,9 @@ describe('Airport',function(){
     expect(airport.planes().length).toEqual(2);
     expect(airport.planes()).toContain(plane2);
   });
+
+  it('knows the ID of the plane that has landed', function() {
+    plane.land(airport);
+    expect(airport.planes().id()).toEqual(plane.id);
+  });
 });
