@@ -9,7 +9,7 @@ describe('Airport',function(){
     plane = new Plane();
   });
   it('can receive a plane that wants to land', function(){
-    airport.land(plane);
+    airport.receivePlane(plane);
     expect(airport.landedPlanes).toContain(plane);
   });
 
