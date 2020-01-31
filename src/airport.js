@@ -14,7 +14,7 @@ class Airport {
     return this.landedPlanes;
   };
 
-  takeOff(plane) {
+  planeDepart(plane) {
     for(var i = 0; i < this.landedPlanes.length; i++) {
       if(this.landedPlanes[i] === plane) {
         this.landedPlanes.splice(i, 1)

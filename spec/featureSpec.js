@@ -17,7 +17,7 @@ describe('Feature Test:', function(){
 
   it('planes can take off from an airport and confirm it is no longer at the airport', function() {
     airport.receivePlane(plane);
-    airport.takeOff(plane);
+    airport.planeDepart(plane);
     expect(airport.planes().length).toEqual(0);
     expect(airport.planes()).not.toContain(plane);
   });

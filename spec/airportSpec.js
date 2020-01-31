@@ -16,4 +16,10 @@ describe('Airport',function(){
   it('has no planes by default', function() {
     expect(airport.planes()).toEqual([]);
   });
+
+  it('allows a plane to depart the airport', function() {
+    airport.receivePlane(plane);
+    airport.planeDepart(plane);
+    expect(airport.planes()).not.toContain(plane);
+  });
 });
