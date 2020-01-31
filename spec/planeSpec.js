@@ -24,7 +24,7 @@ describe('Plane', function() {
   });
 
   it('knows its own ID', function() {
-    expect(plane.id()).toBe(true);
+    expect(plane.id()).toBeDefined();
   });
 
   it('planes have unique IDs', function () {

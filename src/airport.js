@@ -21,4 +21,12 @@ class Airport {
       }
     }
   };
+
+  planeId(plane) {
+    for(var i = 0; i < this.landedPlanes.length; i++) {
+      if(this.landedPlanes[i] === plane) {
+        return plane.id;
+      }
+    }
+  };
 };
