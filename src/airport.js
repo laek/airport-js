@@ -6,7 +6,19 @@ class Airport {
     this.landedPlanes = [];
   };
 
-  land(plane) {
+  receivePlane(plane) {
     this.landedPlanes.push(plane);
+  };
+
+  planes() {
+    return this.landedPlanes;
+  };
+
+  takeOff(plane) {
+    for(var i = 0; i < this.landedPlanes.length; i++) {
+      if(this.landedPlanes[i] === plane) {
+        this.landedPlanes.splice(i, 1)
+      }
+    }
   };
 };
