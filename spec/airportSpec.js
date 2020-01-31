@@ -3,6 +3,7 @@
 describe('Airport',function(){
   var airport;
   var plane;
+  var plane2;
 
   beforeEach(function(){
     airport = new Airport();
@@ -21,5 +22,13 @@ describe('Airport',function(){
     airport.receivePlane(plane);
     airport.planeDepart(plane);
     expect(airport.planes()).not.toContain(plane);
+  });
+
+  it('is able to receive multiple planes', function() {
+    plane2 = new Plane();
+    airport.receivePlane(plane);
+    airport.receivePlane(plane2);
+    expect(airport.planes().length).toEqual(2);
+    expect(airport.planes()).toContain(plane2);
   });
 });

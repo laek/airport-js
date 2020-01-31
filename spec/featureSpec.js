@@ -21,4 +21,12 @@ describe('Feature Test:', function(){
     expect(airport.planes().length).toEqual(0);
     expect(airport.planes()).not.toContain(plane);
   });
+
+  it('airport can receive multiple planes', function() {
+    plane2 = new Plane();
+    airport.receivePlane(plane);
+    airport.receivePlane(plane2);
+    expect(airport.planes().length).toEqual(2);
+    expect(airport.planes()).toContain(plane2);
+  });
 });
