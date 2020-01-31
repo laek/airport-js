@@ -10,6 +10,10 @@ describe('Airport',function(){
   });
   it('can receive a plane that wants to land', function(){
     airport.land(plane);
-    expect(airport.landed_planes).toInclude(plane);
+    expect(airport.landedPlanes).toContain(plane);
+  });
+
+  it('has no planes by default', function() {
+    expect(airport.landedPlanes).toEqual([]);
   });
 });
