@@ -2,6 +2,7 @@
 
 describe('Feature Test:', function(){
   var plane;
+  var plane2;
   var airport;
 
   beforeEach(function(){
@@ -12,5 +13,14 @@ describe('Feature Test:', function(){
   it('planes can land at an airport', function(){
     airport.land(plane);
     expect(airport.landedPlanes).toContain(plane);
+  });
+
+  it('planes can take off from an airport and confirm it is no longer at the airport', function() {
+    plane2 = new Plane();
+    airport.land(plane);
+    airport.land(plane2);
+    airport.takeOff(plane2);
+    expect(airport.landedPlanes.length).toEqual(1);
+    expect(airport.landedPlanes).not.toContaine(plane2);
   });
 });
